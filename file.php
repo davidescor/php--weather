@@ -1,52 +1,38 @@
 <?php
+$day = [];
+$dayWeather = [];
+$dayTempmin = [];
+$dayTempax = [];
 
-//INDICAMOS LA RUTA DEL FICHERO XML QUE HEMOS OBTENIDO CON LA API//
-//Para que esto funcione con sus ciudades, debe cambiar el valor del file e indicar la ruta URL
-// de la localidad obtenida a traves de la API de tiempo
-$file='http://api.tiempo.com/index.php?api_lang=es&localidad=3776&affiliate_id=zh7hawv169fw';
+$hour = [];
+$hourTemp = [];
+$hourSymnbol = [];
+$hourWind = [];
+$houHumidity = [];
 
-if($xml = simplexml_load_file($file)){ //ABRIMOS EL FICHERO CON LA LIBRERIA SIPLEXML_LOAD_FILE
-    //LEEMOS LOS DATOS QUE NECESITAMOS//
-    $i=0;
-    $url= $xml->location->interesting->url;
-    $array=explode('-', $url);  
-    $lugar = $xml->location->attributes();
-    $city = explode('[', $lugar);
-  
-    // En este ejemplo, para obtener los iconos del tiempo y del viento usaremos el atributo id del nodo forecast correspondiente
-    // y obtenemos de esta forma el valor númerico que corresponde a cada icono
-    foreach ($xml->location->var as $var) {
-      switch ($i) {
-        case 0: 
-          //LEEMOS LA TEMPERATURA MINIMA//
-          $TempMin = htmlentities($xml->location->var[0]->data->forecast[0]->attributes()->value,ENT_COMPAT,'UTF-8');
-        break;
-        case 1:
-          //LEEMOS LA TEMPERATURA MAXIMA//
-          $TempMax = htmlentities($xml->location->var[1]->data->forecast[0]->attributes()->value,ENT_COMPAT,'UTF-8');
-        break;
-        case 2:
-          //LEEMOS EL ICONO DEL VIENTO//
-          // En este ejemplo, usaremos los valores númericos de los iconos          
-          $Viento = htmlentities($xml->location->var[2]->data->forecast[0]->attributes()->id,ENT_COMPAT,'UTF-8');
-          $Viento_desc= htmlentities($xml->location->var[2]->data->forecast[0]->attributes()->value,ENT_COMPAT,'UTF-8');
-        break;
-        case 3:
-          //LEEMOS EL ICONO DEL TIEMPO//
-          // En este ejemplo, usaremos los valores númericos de los iconos        
-          $Simbolo = htmlentities($xml->location->var[3]->data->forecast[0]->attributes()->id,ENT_COMPAT,'UTF-8');
-          $Simbolo_desc= htmlentities($xml->location->var[2]->data->forecast[0]->attributes()->value,ENT_COMPAT,'UTF-8');
-        break;
-        case 4: 
-          //LEEMOS EL DIA DE LA SEMANA//
-          $Dia = htmlentities($xml->location->var[4]->data->forecast[0]->attributes()->value,ENT_COMPAT,'UTF-8');
-        break;
-      }
-      $i++;
-    }
-} //TERMINAMOS LA LECTURA DEL FICHERO, TENEMOS LOS DATOS ACUMULADOS EN LOS ARRAYS TEMPERATURAMINIMA, TEMPERATURAMAXIMA, DIASEMANA
-else{
+$url = "http://api.tiempo.com/index.php?api_lang=es&localidad=3776&affiliate_id=zh7hawv169fw&v=2.0&h=1";
 
-  echo "No se pudo leer el fichero";
-  exit;
+$xml=simplexml_load_file($url) or die("Error: Cannot create object");
+//INFO 5 DAYS
+for($i = 0; $i < 5; $i++){
+  $day[$i] = htmlentities($xml->location->day[$i]->attributes()->name,ENT_COMPAT,'UTF-8');
+  $dayWeather[$i] = htmlentities($xml->location->day[$i]->symbol->attributes()->value,ENT_COMPAT,'UTF-8');
+  $dayTempmin[$i] = htmlentities($xml->location->day[$i]->tempmin->attributes()->value,ENT_COMPAT,'UTF-8');
+  $dayTempax[$i] = htmlentities($xml->location->day[$i]->tempmax->attributes()->value,ENT_COMPAT,'UTF-8');
+
 }
+
+//INFO 24HOURS - SAME DAY
+for($k = 0; $k < 24; $k++){
+  $hour[$k] = htmlentities($xml->location->day->hour[$k]->attributes()->value,ENT_COMPAT,'UTF-8');
+  $hourTemp[$k] = htmlentities($xml->location->day->hour[$k]->temp->attributes()->value,ENT_COMPAT,'UTF-8');
+  $hourSymnbol[$k] = htmlentities($xml->location->day->hour[$k]->symbol->attributes()->value,ENT_COMPAT,'UTF-8');
+  $hourWind[$k] = htmlentities($xml->location->day->hour[$k]->wind->attributes()->value,ENT_COMPAT,'UTF-8');
+  $houHumidity[$k] = htmlentities($xml->location->day->hour[$k]->humidity->attributes()->value,ENT_COMPAT,'UTF-8');
+}
+
+
+
+
+
+?>

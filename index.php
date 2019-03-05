@@ -24,32 +24,6 @@ include_once("file.php");
 
   <body>
 
-    <?php
-
-    echo '<p align="center">';
-    echo '<table class="fondoGrande">';
-      echo '<tr><th colspan="5">'.$city[0].'</th></tr>';
-      echo '<tr><td>';
-        echo'<table class="fondo" align="center">'; 
-          echo'<tr><th colspan="2">'.$Dia.'</th></tr>';
-          echo '<tr>';
-            echo '<td align="center">';
-            echo '<img src="img/weather/color/'.$Simbolo.'.svg" alt="'.$Simbolo_desc.'" title="'.$Simbolo_desc.'"/><BR>'; 
-            echo '</td>';
-            echo '<td align="center">';
-              echo  '<img src="img/wind/'.$Viento.'.png" alt="'.$Viento_desc.'" title="'.$Viento_desc.'"/><BR>';
-            echo '</td>';
-          echo '</tr>';
-          echo '<tr><th colspan="2">Maxima '.$TempMax.'</th></tr>';
-          echo '<tr><th colspan="2">Minima '.$TempMin.'</th></tr>';
-        echo '</table>';
-      echo '</td></tr>';
-      echo '<tr><th align="center">';
-      echo '</th></tr>';
-    echo '</table>';
-    echo '</p>';
-
-    ?>
 
 
     <!-- BOOSTRAP JAVASCRIPT -->
