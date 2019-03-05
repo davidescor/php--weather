@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	overflow-x: hidden;
+}
+.hr-white{
+	width: 85%;
+	border: .9px solid #0e6aa8;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+.hr-gray{
+	width: 100%;
+	border: .5px solid #ddd;
+
+}
+
+
+
+
+.logo{
+	font-size: 20px;
+	color: black;
+	font-weight: bold;
+	text-transform: none;
+	text-decoration: none;
+}
+
+
+
+.upcase{
+	text-transform: uppercase;
+}
+.bg-black{
+	background-color: #2981bc !important;
+}
+.bg-blue{
+	background-color: #2981bc;
+}
+.bg-darkblue{
+	background-color: #0e6aa8;
+}
+
+
+.c-white{
+	color: white;
+}
+.c-black{
+	color: black !important;
+}
+.c-blackmenu{
+	color: #666 !important;
+}
+.c-blackmenu:hover{
+	color: #222 !important;
+}
+
+
+.margintop5{
+	margin-top: 5%;
+}
+.ptopup{
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+.ptopup:hover{
+	background-color: #1174b7;
+}
+.ptopup2{
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+.p-left{
+	margin-left: 2%;
+}
+
+
+.f-size11{
+	font-size: 11px;
+}
+.f-size15{
+	font-size: 15px;
+}
+.f-size20{
+	font-size: 20px;
+}
+.f-size25{
+	font-size: 25px;
+}
+.f-bold{
+	font-weight: bold;
+}
+.f-left{
+	float: left;
+}
+.f-right{
+	float: right;
+}
+
+.nav-link{
+	text-transform: uppercase;
+	color: #000 !important;
+}
+.nav-link:hover{
+	color: #333 !important;
+}
+.navbar-brand{
+	color: #000 !important;
+	font-size: 25px;
+}
+
+.footer{
+	margin-top: 5%;
+}

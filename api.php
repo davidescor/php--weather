@@ -3,6 +3,7 @@ $day = [];
 $dayWeather = [];
 $dayTempmin = [];
 $dayTempax = [];
+$dayWind = [];
 
 $hour = [];
 $hourTemp = [];
@@ -19,7 +20,8 @@ for($i = 0; $i < 5; $i++){
   $dayWeather[$i] = htmlentities($xml->location->day[$i]->symbol->attributes()->value,ENT_COMPAT,'UTF-8');
   $dayTempmin[$i] = htmlentities($xml->location->day[$i]->tempmin->attributes()->value,ENT_COMPAT,'UTF-8');
   $dayTempax[$i] = htmlentities($xml->location->day[$i]->tempmax->attributes()->value,ENT_COMPAT,'UTF-8');
-
+  $dayWind[$i] = htmlentities($xml->location->day[$i]->wind->attributes()->value,ENT_COMPAT,'UTF-8');
+  
 }
 
 //INFO 24HOURS - SAME DAY
