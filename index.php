@@ -120,7 +120,7 @@ include_once("model.php");
 
       <div class="col-md-12">
         <footer class="text-center footer">
-          <p class="c-white-footer f-size15">WORLD WEATHER © COPYRIGHT BY <a class="no-style" href="www.davidespier.com">DAVID ESPIER</a></p>
+          <p class="c-white-footer f-size15">WORLD WEATHER © COPYRIGHT BY <a class="no-style" href="http://www.davidespier.com">DAVID ESPIER</a></p>
         </footer>
       </div>
 
