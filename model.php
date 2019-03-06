@@ -4,19 +4,13 @@ include_once("api.php");
 
 function firstDay(&$dayWeather, &$city, &$localinfo, &$dayWeatherDesc, &$dayTempmin, &$dayTempmax, &$dayWind, &$dayWindSymbol, &$hour, &$hourTemp){
 
-$temperatura = 0;
+$temperatura = null;
 
 for($i = 0; $i < 23; $i++){
-   if($hour[$i] >= '04:10' && $hour[$i] < '04:10'){
-     $temperatura = $hourTemp[$i];
+   if($hour[$i] >= $localinfo[0] && $hour[$i-1] < $localinfo[0]){
+     $temperatura = $hourTemp[$i-1];
   }
 }
-
-if($hour[23] > '23:59' || $hour[23] < '01:01'){
-      $temperatura = $hourTemp[23];
-}
-
-echo $temperatura;
 
 
   echo   '<p class="c-white f-size30 upcase">'.$city[0].'</p>      
@@ -39,7 +33,7 @@ function dayHistory(&$day, &$dayWeather, &$city, &$localinfo, &$dayWeatherDesc, 
           <img src="img/weather/white/'.$dayWeather[0].'.svg" alt="img temp" width="64" height="64">
           <p class="c-white f-size20">'.$dayTempmin[0].'° min / '.$dayTempmax[0].'° max</p>
           <img src="img/wind/'.$dayWindSymbol[0].'.png" alt="img temp" class="bg-white-radius">
-          <p class="c-white f-size20">13 km/h</p>
+          <p class="c-white f-size20">'.$dayWind[$i].' km/h</p>
           </div>';
     }else{
 
@@ -48,7 +42,7 @@ function dayHistory(&$day, &$dayWeather, &$city, &$localinfo, &$dayWeatherDesc, 
           <img src="img/weather/white/'.$dayWeather[$i].'.svg" alt="img temp" width="64" height="64">
           <p class="c-white f-size20">'.$dayTempmin[$i].'° min / '.$dayTempmax[$i].'° max</p>
           <img src="img/wind/'.$dayWindSymbol[$i].'.png" alt="img temp" class="bg-white-radius">
-          <p class="c-white f-size20">13 km/h</p>
+          <p class="c-white f-size20">'.$dayWind[$i].' km/h</p>
           </div>';
     }
   }
