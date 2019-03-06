@@ -10,6 +10,8 @@ body{
 	margin-top: 2%;
 	margin-bottom: 2%;
 }
+
+
 .hr-gray{
 	width: 100%;
 	border: .5px solid #ddd;
@@ -109,4 +111,23 @@ body{
 
 .footer{
 	margin-top: 5%;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+.hr-white{
+  	visibility: hidden;
+}
+.hidden-xs{
+	visibility: hidden;
+}
+.text-center-xs{
+	text-align: center;
+}
+.f-left{
+	float: none;
+}
+
+
 }

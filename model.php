@@ -20,7 +20,7 @@ for($i = 0; $i < 23; $i++){
           <img src="img/wind/'.$dayWindSymbol[0].'.png" alt="img temp" class="bg-white-radius">
           <p class="c-white f-size25">'.$dayWind[0].' km/h</p>
           <br>
-          <p class="c-white f-size15 upcase text-right m-left5">Última actualización : '.$localinfo[0].'</p>
+          <p class="c-white f-size15 upcase text-center">Última actualización : '.$localinfo[0].'</p>
 
           ';
 }
@@ -53,22 +53,22 @@ function dayHistory(&$day, &$dayWeather, &$city, &$localinfo, &$dayWeatherDesc, 
 
 function hourHistory(&$hour, &$hourTemp, &$hourSymnbol, &$hourWind, &$hourWindSymbol, &$hourSymnbolDesc, &$city){
 
-  echo '<p class="c-black f-size30">El Tiempo en '.$city[0].'</p>';
+  echo '<p class="c-black f-size30 text-center-xs">El Tiempo en '.$city[0].'</p>';
 
   for($i = 0; $i < 24; $i++){
     echo ' <hr class="hr-gray">
             <div class="row">
-              <div class="col-md-2">
+              <div class="col-md-2 text-center-xs">
                 <p class="f-size20">'.$hour[$i].'</p>
               </div>
-              <div class="col-md-2">
+              <div class="col-md-2 text-center-xs">
                 <img src="img/weather/color/'.$hourSymnbol[$i].'.svg" alt="img temp" width="33" height="33" style="margin-top: -7px;">
               </div>
-              <div class="col-md-5">
+              <div class="col-md-5 text-center-xs">
                 <p class="f-size20 f-bold f-left">'.$hourTemp[$i].'°</p>
                 <p class="f-size20 f-left p-left">'.$hourSymnbolDesc[$i].'</p>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 text-center-xs">
                 <img src="img/wind/'.$hourWindSymbol[$i].'.png" alt="img temp" class="f-left">
                 <p class="f-size20 f-left">'.$hourWind[$i].' km/h</p>
               </div>

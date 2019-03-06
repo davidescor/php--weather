@@ -28,58 +28,54 @@ include_once("model.php");
   <body>
 
 <!-- menu -->
-<nav class="navbar navbar-expand-lg navbar-dark primary-color bg-img">
-  <a class="navbar-brand" href="index.php">WORLD WEATHER</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="basicExampleNav">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link upcase" href="index.php?ciudad=0">barcelona</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link upcase" href="index.php?ciudad=1">Lleida</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link upcase" href="index.php?ciudad=2">Madrid</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link upcase" href="index.php?ciudad=3">Sevilla</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link upcase" href="index.php?ciudad=4">Zaragoza</a>
-      </li>
-    </ul>
-    <div class="form-inline">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-      </li>
-    </ul>
-    </div>
-  </div>
-</nav>
+
 <!-- /menu -->
 
 
-    <div class="row">
-      <div class="col-md-3 bg-img" >
+    <div class="row bg-img">
+
+      <div class="col-md-12 text-center" >
+        <nav class="navbar navbar-expand-lg navbar-dark primary-color bg-img">
+          <a class="navbar-brand" href="index.php">WORLD WEATHER</a>
+          <button class="navbar-toggler f-right" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="basicExampleNav">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link upcase" href="index.php?ciudad=0">barcelona</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link upcase" href="index.php?ciudad=1">Lleida</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link upcase" href="index.php?ciudad=2">Madrid</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link upcase" href="index.php?ciudad=3">Sevilla</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link upcase" href="index.php?ciudad=4">Zaragoza</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
+
+
       <!-- tiempo dia -->
-      <div class="col-md-6 bg-img text-center" >
+      <div class="col-md-12 text-center" >
             <?php
                 firstDay($dayWeather, $city, $localinfo, $dayWeatherDesc, $dayTempmin, $dayTempmax, $dayWind, $dayWindSymbol,$hour,$hourTemp);
             ?>
       </div>
-      <div class="col-md-3 bg-img" >
-      </div>
       <!-- /tiempo dia -->
 
-      <div class="col-md-3 bg-img">
+      <div class="col-md-3">
       </div>
 
-      <div class="col-md-6 bg-img">
+      <div class="col-md-6">
         <hr class="hr-white">
         <div class="row">
 
@@ -95,6 +91,9 @@ include_once("model.php");
             <!-- /tiempo dia individual -->
             <div class="col-md-1">
             </div>
+
+
+
             <div class="col-md-12">
               <br>
             </div>
@@ -102,23 +101,27 @@ include_once("model.php");
         </div>
       </div>
 
-      <div class="col-md-3 bg-img">
+      <div class="col-md-3">
       </div>
 
+    </div>
+
+    <div class="row">
       <div class="col-md-4">
       </div>
 
       <div class="col-md-4">
         <br>
+
         <!-- tiempo hora -->
         <?php
           hourHistory($hour,$hourTemp,$hourSymnbol,$hourWind,$hourWindSymbol,$hourSymnbolDesc,$city);
         ?>
-
-
+      <div class="col-md-4">
+      </div>
         <!-- /tiempo hora -->
 
-      <div class="col-md-12">
+      <div class="col-xs-12">
         <footer class="text-center footer">
           <p class="c-white-footer f-size15">WORLD WEATHER © COPYRIGHT BY <a class="no-style" href="http://www.davidespier.com">DAVID ESPIER</a></p>
         </footer>
