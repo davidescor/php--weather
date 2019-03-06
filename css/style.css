@@ -35,8 +35,13 @@ body{
 .bg-black{
 	background-color: #2981bc !important;
 }
-.bg-blue{
-	background-color: #2981bc;
+.bg-img{
+  background: url(../img/bg-night.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
 }
 .bg-darkblue{
 	background-color: #0e6aa8;
@@ -74,7 +79,9 @@ body{
 .p-left{
 	margin-left: 2%;
 }
-
+.m-left5{
+	padding-right: 7.3%;
+}
 
 .f-size11{
 	font-size: 11px;
@@ -88,6 +95,9 @@ body{
 .f-size25{
 	font-size: 25px;
 }
+.f-size45{
+	font-size: 45px;
+}
 .f-bold{
 	font-weight: bold;
 }
@@ -96,18 +106,6 @@ body{
 }
 .f-right{
 	float: right;
-}
-
-.nav-link{
-	text-transform: uppercase;
-	color: #000 !important;
-}
-.nav-link:hover{
-	color: #333 !important;
-}
-.navbar-brand{
-	color: #000 !important;
-	font-size: 25px;
 }
 
 .footer{

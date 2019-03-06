@@ -1,6 +1,9 @@
 <?php
 
+
 include_once("api.php");
+include_once("model.php");
+
 
 ?>
 
@@ -25,31 +28,28 @@ include_once("api.php");
   <body>
 
 <!-- menu -->
-<nav class="navbar navbar-expand-lg navbar-dark primary-color">
-  <a class="navbar-brand" href="index.php">WORLDWEATHER</a>
-  <button class="navbar-toggler bg-black" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+<nav class="navbar navbar-expand-lg navbar-dark primary-color bg-img">
+  <a class="navbar-brand" href="index.php">WORLD WEATHER</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
     aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="basicExampleNav">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="index.php">EL TIEMPO</a>
+        <a class="nav-link upcase" href="index.php?ciudad=0">barcelona</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">MAPAS</a>
+        <a class="nav-link upcase" href="index.php?ciudad=1">Lleida</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index.php">SATÉLITES</a>
+        <a class="nav-link upcase" href="index.php?ciudad=2">Madrid</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">RADAR</a>
+        <a class="nav-link upcase" href="index.php?ciudad=3">Sevilla</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">NOTICIAS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="index.php">EL MUNDO</a>
+        <a class="nav-link upcase" href="index.php?ciudad=4">Zaragoza</a>
       </li>
     </ul>
     <div class="form-inline">
@@ -64,22 +64,22 @@ include_once("api.php");
 
 
     <div class="row">
-
+      <div class="col-md-3 bg-img" >
+      </div>
       <!-- tiempo dia -->
-      <div class="col-md-12 bg-blue text-center" >
-          <br>
-          <p class="c-white f-size11 upcase">Inicio &rarr; Cataluña &rarr; Provincia de Lleida &rarr; Lleida</p>
-          <p class="c-white f-size25">El Tiempo en Lleida</p>
-          <img src="img/weather/white/1.svg" alt="img temp">
-          <p class="c-white f-size15">16:25 Intervalos nubosos</p>
-          <p class="c-white f-size25">19°/9°</p> 
+      <div class="col-md-6 bg-img text-center" >
+            <?php
+                firstDay($dayWeather, $city, $localinfo, $dayWeatherDesc, $dayTempmin, $dayTempmax, $dayWind, $dayWindSymbol);
+            ?>
+      </div>
+      <div class="col-md-3 bg-img" >
       </div>
       <!-- /tiempo dia -->
 
-      <div class="col-md-3 bg-blue">
+      <div class="col-md-3 bg-img">
       </div>
 
-      <div class="col-md-6 bg-blue">
+      <div class="col-md-6 bg-img">
         <hr class="hr-white">
         <div class="row">
 
@@ -87,44 +87,11 @@ include_once("api.php");
             </div>
 
             <!-- tiempo dia individual -->
-            <div class="col-md-2 text-center bg-darkblue ptopup">
-              <p class="c-white f-size20 upcase ">hoy</p>
-              <img src="img/weather/white/4.svg" alt="img temp" width="64" height="64">
-              <p class="c-white f-size15">23°/11°</p>
-              <img src="img/wind/1.png" alt="img temp" class="bg-white-radius">
-              <p class="c-white f-size15">13 km/h</p>
+              <?php
+                dayHistory($day, $dayWeather, $city, $localinfo, $dayWeatherDesc, $dayTempmin, $dayTempmax, $dayWind, $dayWindSymbol);
+              ?>
 
-            </div>
-           <div class="col-md-2 text-center ptopup">
-              <p class="c-white f-size20 upcase">mañana</p>
-              <img src="img/weather/white/14.svg" alt="img temp" width="64" height="64">
-              <p class="c-white f-size15">22°/5°</p> 
-              <img src="img/wind/4.png" alt="img temp" class="bg-white-radius">
-              <p class="c-white f-size15">13 km/h</p>
 
-            </div>
-           <div class="col-md-2 text-center ptopup">
-              <p class="c-white f-size20 upcase">MIERCOLES</p>
-              <img src="img/weather/white/9.svg" alt="img temp" width="64" height="64">
-              <p class="c-white f-size15">19°/9°</p> 
-              <img src="img/wind/11.png" alt="img temp" class="bg-white-radius">
-              <p class="c-white f-size15">13 km/h</p>
-
-            </div>
-           <div class="col-md-2 text-center ptopup">
-              <p class="c-white f-size20 upcase">JUEVES</p>
-              <img src="img/weather/white/21.svg" alt="img temp" width="64" height="64">
-              <p class="c-white f-size15">27°/10°</p> 
-              <img src="img/wind/14.png" alt="img temp" class="bg-white-radius">
-              <p class="c-white f-size15">13 km/h</p>
-            </div>
-           <div class="col-md-2 text-center ptopup">
-              <p class="c-white f-size20 upcase">VIERNES</p>
-              <img src="img/weather/white/1.svg" alt="img temp" width="64" height="64" >
-              <p class="c-white f-size15">32°/12°</p> 
-              <img src="img/wind/32.png" alt="img temp" class="bg-white-radius">
-              <p class="c-white f-size15">13 km/h</p>
-            </div>
             <!-- /tiempo dia individual -->
             <div class="col-md-1">
             </div>
@@ -135,7 +102,7 @@ include_once("api.php");
         </div>
       </div>
 
-      <div class="col-md-3 bg-blue">
+      <div class="col-md-3 bg-img">
       </div>
 
       <div class="col-md-4">
@@ -146,24 +113,11 @@ include_once("api.php");
         <!-- tiempo hora -->
         <p class="c-black f-size20">El Tiempo en Lleida</p>
 
+        <?php
+          hourHistory($hour,$hourTemp,$hourSymnbol,$hourWind,$hourWindSymbol,$hourSymnbolDesc);
+        ?>
 
-        <hr class="hr-gray">
-          <div class="row">
-            <div class="col-md-3">
-              <p class="f-size15">17:00</p>
-            </div>
-            <div class="col-md-2">
-              <img src="img/weather/color/21.svg" alt="img temp" width="33" height="33" style="margin-top: -7px;">
-            </div>
-            <div class="col-md-4">
-              <p class="f-size15 f-bold f-left">17°</p>
-              <p class="f-size15 f-left p-left">Intervalos nubosos</p>
-            </div>
-            <div class="col-md-3">
-              <img src="img/wind/32.png" alt="img temp" class="f-left">
-              <p class="f-size15 f-left">13 km/h</p>
-            </div>
-           </div>
+
         <!-- /tiempo hora -->
 
       <div class="col-md-12">
