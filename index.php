@@ -69,7 +69,7 @@ include_once("model.php");
       <!-- tiempo dia -->
       <div class="col-md-6 bg-img text-center" >
             <?php
-                firstDay($dayWeather, $city, $localinfo, $dayWeatherDesc, $dayTempmin, $dayTempmax, $dayWind, $dayWindSymbol);
+                firstDay($dayWeather, $city, $localinfo, $dayWeatherDesc, $dayTempmin, $dayTempmax, $dayWind, $dayWindSymbol,$hour,$hourTemp);
             ?>
       </div>
       <div class="col-md-3 bg-img" >
@@ -111,10 +111,8 @@ include_once("model.php");
       <div class="col-md-4">
         <br>
         <!-- tiempo hora -->
-        <p class="c-black f-size20">El Tiempo en Lleida</p>
-
         <?php
-          hourHistory($hour,$hourTemp,$hourSymnbol,$hourWind,$hourWindSymbol,$hourSymnbolDesc);
+          hourHistory($hour,$hourTemp,$hourSymnbol,$hourWind,$hourWindSymbol,$hourSymnbolDesc,$city);
         ?>
 
 
