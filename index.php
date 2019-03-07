@@ -36,7 +36,7 @@ include_once("model.php");
 
       <div class="col-md-12 text-center" >
         <nav class="navbar navbar-expand-lg navbar-dark primary-color bg-img">
-          <a class="navbar-brand" href="index.php">WORLD WEATHER</a>
+          <a class="navbar-brand" href="index.php">EL TIEMPO</a>
           <button class="navbar-toggler f-right" type="button" data-toggle="collapse" data-target="#basicExampleNav"
             aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
