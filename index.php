@@ -17,7 +17,7 @@ include_once("model.php");
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>WORLD WEATHER</title>
+    <title>EL TIEMPO</title>
 
     <!-- BOOTSTRAP CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -123,7 +123,7 @@ include_once("model.php");
 
       <div class="col-xs-12">
         <footer class="text-center footer">
-          <p class="c-white-footer f-size15">WORLD WEATHER © COPYRIGHT BY <a class="no-style" href="http://www.davidespier.com">DAVID ESPIER</a></p>
+          <p class="c-white-footer f-size15">EL TIEMPO © COPYRIGHT BY <a class="no-style" href="http://www.davidespier.com">DAVID ESPIER</a></p>
         </footer>
       </div>
 
