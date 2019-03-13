@@ -111,6 +111,7 @@ body{
 
 .footer{
 	margin-top: 5%;
+	color: black;
 }
 
 
@@ -133,5 +134,14 @@ body{
 	  background: url(none) no-repeat center center fixed; 
 	  background-color: #333;
 	 }
+	 .col-md-2{
+	 	text-align: center !important;
+	 }
  
+}
+
+.provincias{
+	color: white;
+	font-size: 50px;
+	padding: 25px;
 }

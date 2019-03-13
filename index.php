@@ -44,19 +44,7 @@ include_once("model.php");
           <div class="collapse navbar-collapse" id="basicExampleNav">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link upcase" href="index.php?ciudad=0">barcelona</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link upcase" href="index.php?ciudad=1">Lleida</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link upcase" href="index.php?ciudad=2">Madrid</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link upcase" href="index.php?ciudad=3">Sevilla</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link upcase" href="index.php?ciudad=4">Zaragoza</a>
+                <a class="nav-link upcase" href="provincias.php">PROVINCIAS</a>
               </li>
             </ul>
           </div>
@@ -123,7 +111,7 @@ include_once("model.php");
 
       <div class="col-xs-12">
         <footer class="text-center footer">
-          <p class="c-white-footer f-size15">EL TIEMPO © COPYRIGHT BY <a class="no-style" href="http://www.davidespier.com">DAVID ESPIER</a></p>
+          <p class="f-size15 c-black">EL TIEMPO © COPYRIGHT</p><a class="no-style" href="http://www.davidespier.com">DAVID ESPIER</a>
         </footer>
       </div>
 

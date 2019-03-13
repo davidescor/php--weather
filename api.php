@@ -3,20 +3,8 @@
 if(isset($_GET['ciudad'])){
   $ciudad = $_GET['ciudad'];
 }else{
-  $ciudad = 0;
+  $ciudad = 3776;
 }
-
-if($ciudad == 0){
-    $urlcity = '1200'; //Barcelona
-  }else if($ciudad == 1){
-    $urlcity = '3776'; //lleida
-  }else if($ciudad == 2){
-    $urlcity = '313'; //madrid
-  }else if($ciudad == 3){
-    $urlcity = '5662'; //sevilla
-  }else if($ciudad == 4){
-    $urlcity = '8095'; //zaragoza
-  }
 
 
 $day = [];
@@ -35,7 +23,7 @@ $hourWind = [];
 $hourWindSymbol = [];
 $hourSymnbolDesc = [];
 
-$url = "http://api.tiempo.com/index.php?api_lang=es&localidad=".$urlcity."&affiliate_id=zh7hawv169fw&v=2.0&h=1";
+$url = "http://api.tiempo.com/index.php?api_lang=es&localidad=".$ciudad."&affiliate_id=zh7hawv169fw&v=2.0&h=1";
 
 $xml=simplexml_load_file($url) or die("Error: Cannot create object");
 
