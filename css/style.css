@@ -116,18 +116,22 @@ body{
 
 @media only screen and (max-width: 600px) {
 
-.hr-white{
-  	visibility: hidden;
-}
-.hidden-xs{
-	visibility: hidden;
-}
-.text-center-xs{
-	text-align: center;
-}
-.f-left{
-	float: none;
-}
+	.hr-white{
+	  	visibility: hidden;
+	}
+	.hidden-xs{
+		visibility: hidden;
+	}
+	.text-center-xs{
+		text-align: center;
+	}
+	.f-left{
+		float: none;
+	}
 
-
+	.bg-img{
+	  background: url(none) no-repeat center center fixed; 
+	  background-color: #333;
+	 }
+ 
 }
