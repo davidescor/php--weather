@@ -1,9 +1,6 @@
 <?php
 
-
-include_once("api.php");
 include_once("model.php");
-
 
 ?>
 
@@ -44,7 +41,10 @@ include_once("model.php");
           <div class="collapse navbar-collapse" id="basicExampleNav">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link upcase" href="provincias.php">PROVINCIAS</a>
+                <a class="nav-link upcase" href=""></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link upcase" href=""></a>
               </li>
             </ul>
           </div>

@@ -48,9 +48,6 @@ function dayHistory(&$day, &$dayWeather, &$city, &$localinfo, &$dayWeatherDesc, 
   }
 }
 
-
-
-
 function hourHistory(&$hour, &$hourTemp, &$hourSymnbol, &$hourWind, &$hourWindSymbol, &$hourSymnbolDesc, &$city){
 
   echo '<p class="c-black f-size30 text-center-xs">El Tiempo en '.$city[0].'</p>';
@@ -75,5 +72,7 @@ function hourHistory(&$hour, &$hourTemp, &$hourSymnbol, &$hourWind, &$hourWindSy
              </div>';
   }
 }
+
+
 
 ?>
