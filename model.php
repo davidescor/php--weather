@@ -2,11 +2,12 @@
 
 include_once("api.php");
 
+
 function firstDay(&$dayWeather, &$city, &$localinfo, &$dayWeatherDesc, &$dayTempmin, &$dayTempmax, &$dayWind, &$dayWindSymbol, &$hour, &$hourTemp){
 
 $temperatura = null;
 
-for($i = 0; $i < 23; $i++){
+for($i = 0; $i <= 23; $i++){
    if($hour[$i] >= $localinfo[0] && $hour[$i-1] < $localinfo[0]){
      $temperatura = $hourTemp[$i-1];
   }
@@ -37,7 +38,7 @@ function dayHistory(&$day, &$dayWeather, &$city, &$localinfo, &$dayWeatherDesc, 
           </div>';
     }else{
 
-    echo '<div class="col-md-2 text-center ptopup">
+    echo '<div class="col-md-2 text-center ptopupother">
           <p class="c-white f-size25 upcase ">'.$day[$i].'</p>
           <img src="img/weather/white/'.$dayWeather[$i].'.svg" alt="img temp" width="64" height="64">
           <p class="c-white f-size20">'.$dayTempmin[$i].'° min / '.$dayTempmax[$i].'° max</p>
@@ -49,8 +50,9 @@ function dayHistory(&$day, &$dayWeather, &$city, &$localinfo, &$dayWeatherDesc, 
 }
 
 function hourHistory(&$hour, &$hourTemp, &$hourSymnbol, &$hourWind, &$hourWindSymbol, &$hourSymnbolDesc, &$city){
-
-  echo '<p class="c-black f-size30 text-center-xs">El Tiempo en '.$city[0].'</p>';
+  date_default_timezone_set('Europe/Madrid');
+  $fecha = date("d/m/Y");
+  echo '<p class="c-black f-size30 text-center-xs">El Tiempo en '.$city[0].' hoy día '.$fecha.'.</p>';
 
   for($i = 0; $i < 24; $i++){
     echo ' <hr class="hr-gray">

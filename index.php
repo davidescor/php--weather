@@ -8,7 +8,12 @@ include_once("model.php");
 <html lang="en">
 
   <head>
-
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/ico" />
+    <link rel="apple-touch-icon" href="img/favicon.ico" type="image/ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon-precomposed" href="img/favicon.ico" type="image/ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -32,12 +37,6 @@ include_once("model.php");
     <div class="row bg-img">
 
       <div class="col-md-12 text-center" >
-        <nav class="navbar navbar-expand-lg navbar-dark primary-color bg-img">
-          <a class="navbar-brand" href="index.php">EL TIEMPO</a>
-          <button class="navbar-toggler f-right" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
           <div class="collapse navbar-collapse" id="basicExampleNav">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">

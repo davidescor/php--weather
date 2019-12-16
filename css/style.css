@@ -18,6 +18,13 @@ body{
 
 }
 
+.bg-dark{
+  background: url(../img/bg-night.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .upcase{
 	text-transform: uppercase;
@@ -66,14 +73,19 @@ body{
 	padding-top: 2%;
 	padding-bottom: 2%;
 }
+.ptopupother{
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+.ptopupother:hover{
+	background-color: #1174b7;
+}
 .p-left{
 	margin-left: 2%;
 }
 .m-left5{
 	padding-right: 7.3%;
 }
-
-
 
 
 .f-size15{
@@ -94,9 +106,6 @@ body{
 .f-size105{
 	font-size: 50px;
 }
-
-
-
 
 
 .f-bold{
@@ -129,14 +138,15 @@ body{
 	.f-left{
 		float: none;
 	}
-
-	.bg-img{
-	  background: url(none) no-repeat center center fixed; 
-	  background-color: #333;
-	 }
-	 .col-md-2{
-	 	text-align: center !important;
-	 }
+	.col-md-2{
+		text-align: center !important;
+	}
+	.ptopup{
+	 	display: none;
+	}
+	.ptopupother{
+	 	display: none;
+	}
  
 }
 
