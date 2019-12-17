@@ -24,97 +24,53 @@ include_once("model.php");
     <!-- BOOTSTRAP CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
   </head>
-
   <body>
 
-<!-- menu -->
+    <!-- DIV IS CREATED IN CONTROL DAYNIGHT -->
+      <?php 
+        controlDayNigth()
+      ?>
 
-<!-- /menu -->
-
-
-    <div class="row bg-img">
-
-      <div class="col-md-12 text-center" >
-          <div class="collapse navbar-collapse" id="basicExampleNav">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link upcase" href=""></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link upcase" href=""></a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-
-
-      <!-- tiempo dia -->
-      <div class="col-md-12 text-center" >
+      <div class="col-md-12 text-center">
             <?php
                 firstDay($dayWeather, $city, $localinfo, $dayWeatherDesc, $dayTempmin, $dayTempmax, $dayWind, $dayWindSymbol,$hour,$hourTemp);
             ?>
       </div>
-      <!-- /tiempo dia -->
 
       <div class="col-md-3">
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-6 text-center">
         <hr class="hr-white">
         <div class="row">
-
-            <div class="col-md-1">
-            </div>
-
-            <!-- tiempo dia individual -->
-              <?php
-                dayHistory($day, $dayWeather, $city, $localinfo, $dayWeatherDesc, $dayTempmin, $dayTempmax, $dayWind, $dayWindSymbol);
-              ?>
-
-
-            <!-- /tiempo dia individual -->
-            <div class="col-md-1">
-            </div>
-
-
-
-            <div class="col-md-12">
-              <br>
-            </div>
-
+          <?php
+            dayHistory($day, $dayWeather, $city, $localinfo, $dayWeatherDesc, $dayTempmin, $dayTempmax, $dayWind, $dayWindSymbol);
+          ?>
         </div>
       </div>
 
-      <div class="col-md-3">
-      </div>
-
+    <!-- DIV IS CREATED IN CONTROL DAYNIGHT -->
     </div>
+    <!-- /DIV IS CREATED IN CONTROL DAYNIGHT -->
 
     <div class="row">
-      <div class="col-md-4">
+      <div class="container">
+        <div class="col-md-12 text-center">
+          <!-- tiempo hora -->
+          <?php
+            hourHistory($hour,$hourTemp,$hourSymnbol,$hourWind,$hourWindSymbol,$hourSymnbolDesc,$city);
+          ?>
+          <!-- /tiempo hora -->
+
+        <div class="col-md-12">
+          <footer class="text-center footer">
+            <p class="f-size17 c-black">El tiempo © copyright</p><a class="no-style" href="http://www.davidespier.com">davidespier.com</a>
+          </footer>
+        </div>
+       </div>
       </div>
-
-      <div class="col-md-4">
-        <br>
-
-        <!-- tiempo hora -->
-        <?php
-          hourHistory($hour,$hourTemp,$hourSymnbol,$hourWind,$hourWindSymbol,$hourSymnbolDesc,$city);
-        ?>
-      <div class="col-md-4">
-      </div>
-        <!-- /tiempo hora -->
-
-      <div class="col-xs-12">
-        <footer class="text-center footer">
-          <p class="f-size15 c-black">EL TIEMPO © COPYRIGHT</p><a class="no-style" href="http://www.davidespier.com">DAVID ESPIER</a>
-        </footer>
-      </div>
-
-   </div>
+     </div>
 
 
     <!-- BOOSTRAP JAVASCRIPT -->

@@ -1,11 +1,29 @@
 <?php
 
 include_once("api.php");
+date_default_timezone_set('Europe/Madrid');
 
+function controlDayNigth(){
+  $hoy = getdate();
+
+  $stateday = null;
+
+  if($hoy['hours'] >= 7 && $hoy['hours'] <= 18){
+    $stateday = "bg-img-day";
+  }else if($hoy['hours'] >= 19 && $hoy['hours'] <= 21){
+    $stateday = "bg-img-mid-night";
+  }else{
+    $stateday = "bg-img-night";
+  }
+
+  echo '<div class="row '.$stateday.'">
+        ';
+}
 
 function firstDay(&$dayWeather, &$city, &$localinfo, &$dayWeatherDesc, &$dayTempmin, &$dayTempmax, &$dayWind, &$dayWindSymbol, &$hour, &$hourTemp){
 
 $temperatura = null;
+$getdate = getdate();
 
 for($i = 0; $i <= 23; $i++){
    if($hour[$i] >= $localinfo[0] && $hour[$i-1] < $localinfo[0]){
@@ -14,24 +32,22 @@ for($i = 0; $i <= 23; $i++){
 }
 
 
-  echo   '<p class="c-white f-size30 upcase">'.$city[0].'</p>      
-          <img src="img/weather/white/'.$dayWeather[0].'.svg" alt="img temp">
+  echo   '
+          <p class="c-white f-size50 upcase">'.$city[0].'</p>      
+          <img src="img/weather/color/'.$dayWeather[0].'.svg" alt="img temp">
           <p class="c-white f-size105">'.$temperatura.'°</p>
           <p class="c-white f-size30">'.$dayWeatherDesc[0].'</p>
-          <img src="img/wind/'.$dayWindSymbol[0].'.png" alt="img temp" class="bg-white-radius">
-          <p class="c-white f-size25">'.$dayWind[0].' km/h</p>
-          <br>
           <p class="c-white f-size15 upcase text-center">Última actualización : '.$localinfo[0].'</p>
-
           ';
 }
 
 function dayHistory(&$day, &$dayWeather, &$city, &$localinfo, &$dayWeatherDesc, &$dayTempmin, &$dayTempmax, &$dayWind, &$dayWindSymbol){
+    echo "<div class='col-md-1'></div>";
   for($i = 0; $i < 5; $i++){
     if($i == 0){
     echo '<div class="col-md-2 text-center bg-darkblue ptopup">
           <p class="c-white f-size25 upcase ">HOY</p>
-          <img src="img/weather/white/'.$dayWeather[0].'.svg" alt="img temp" width="64" height="64">
+          <img src="img/weather/color/'.$dayWeather[0].'.svg" alt="img temp" width="64" height="64">
           <p class="c-white f-size20">'.$dayTempmin[0].'° min / '.$dayTempmax[0].'° max</p>
           <img src="img/wind/'.$dayWindSymbol[0].'.png" alt="img temp" class="bg-white-radius">
           <p class="c-white f-size20">'.$dayWind[$i].' km/h</p>
@@ -40,7 +56,7 @@ function dayHistory(&$day, &$dayWeather, &$city, &$localinfo, &$dayWeatherDesc, 
 
     echo '<div class="col-md-2 text-center ptopupother">
           <p class="c-white f-size25 upcase ">'.$day[$i].'</p>
-          <img src="img/weather/white/'.$dayWeather[$i].'.svg" alt="img temp" width="64" height="64">
+          <img src="img/weather/color/'.$dayWeather[$i].'.svg" alt="img temp" width="64" height="64">
           <p class="c-white f-size20">'.$dayTempmin[$i].'° min / '.$dayTempmax[$i].'° max</p>
           <img src="img/wind/'.$dayWindSymbol[$i].'.png" alt="img temp" class="bg-white-radius">
           <p class="c-white f-size20">'.$dayWind[$i].' km/h</p>
@@ -50,9 +66,8 @@ function dayHistory(&$day, &$dayWeather, &$city, &$localinfo, &$dayWeatherDesc, 
 }
 
 function hourHistory(&$hour, &$hourTemp, &$hourSymnbol, &$hourWind, &$hourWindSymbol, &$hourSymnbolDesc, &$city){
-  date_default_timezone_set('Europe/Madrid');
   $fecha = date("d/m/Y");
-  echo '<p class="c-black f-size30 text-center-xs">El Tiempo en '.$city[0].' hoy día '.$fecha.'.</p>';
+  echo '<p class="c-black f-size30 text-center-xs margin-5">El Tiempo en '.$city[0].' hoy día '.$fecha.'.</p>';
 
   for($i = 0; $i < 24; $i++){
     echo ' <hr class="hr-gray">
