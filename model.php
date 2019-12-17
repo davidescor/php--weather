@@ -9,7 +9,7 @@ $temperatura = null;
 
 for($i = 0; $i <= 23; $i++){
    if($hour[$i] >= $localinfo[0] && $hour[$i-1] < $localinfo[0]){
-     $temperatura = $hourTemp[$i-1];
+     $temperatura = $hourTemp[$i+1];
   }
 }
 
