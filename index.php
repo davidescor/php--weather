@@ -1,6 +1,6 @@
 <?php
 
-include_once("model.php");
+include_once("core.php");
 
 ?>
 
@@ -27,7 +27,6 @@ include_once("model.php");
   </head>
   <body>
 
-    <!-- DIV IS CREATED IN CONTROL DAYNIGHT -->
       <?php 
         controlDayNigth()
       ?>
@@ -38,10 +37,7 @@ include_once("model.php");
             ?>
       </div>
 
-      <div class="col-md-3">
-      </div>
-
-      <div class="col-md-6 text-center">
+      <div class="col-md-12 text-center">
         <hr class="hr-white">
         <div class="row">
           <?php
@@ -50,18 +46,14 @@ include_once("model.php");
         </div>
       </div>
 
-    <!-- DIV IS CREATED IN CONTROL DAYNIGHT -->
     </div>
-    <!-- /DIV IS CREATED IN CONTROL DAYNIGHT -->
 
     <div class="row">
       <div class="container">
         <div class="col-md-12 text-center">
-          <!-- tiempo hora -->
           <?php
             hourHistory($hour,$hourTemp,$hourSymnbol,$hourWind,$hourWindSymbol,$hourSymnbolDesc,$city);
           ?>
-          <!-- /tiempo hora -->
 
         <div class="col-md-12">
           <footer class="text-center footer">
@@ -71,9 +63,6 @@ include_once("model.php");
        </div>
       </div>
      </div>
-
-
-    <!-- BOOSTRAP JAVASCRIPT -->
 
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
