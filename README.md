@@ -6,11 +6,11 @@ Website in PHP with functionality to collect the current weather of different ci
 
 ## Requirements
 
-- Php 5.6 ~ 7. (You can use usbwebserver or xampp)
+Php 5.6 ~ 7. (You can use usbwebserver or xampp)
 
 ## Installation
 
-- You can change the city in 'api.php', you can find the city code on the next [page](http://api.tiempo.com/).
+You can change the city in 'api.php', you can find the city code on the next [page](http://api.tiempo.com/).
 
 (Copy files to hosting, usbwebserver or xampp and run)
 
