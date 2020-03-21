@@ -31,21 +31,21 @@ Website in PHP with functionality to collect the current weather of different ci
           $time_day_control_min = '07:00';
           $time_day_control_max = '21:00';
 
- 2.1 - Explanation:
- 
-          $timeSet = 'Europe/Madrid';
+                    2.1 - Explanation:
 
-          $city -> Default city on the main page.
-          $apikey -> Add your private api key https://www.tiempo.com/api
+                    $timeSet = 'Europe/Madrid';
 
-          $background_navbar_day_color -> Default background nav bar color day.
-          $background_navbar_night_color -> Default background nav bar color night.
+                    $city -> Default city on the main page.
+                    $apikey -> Add your private api key https://www.tiempo.com/api
 
-          $background_day_color -> Default background div color day.
-          $background_night_color -> Default background div color night.
+                    $background_navbar_day_color -> Default background nav bar color day.
+                    $background_navbar_night_color -> Default background nav bar color night.
 
-          $time_day_control_min -> Start time of the day to change background.
-          $time_day_control_max -> End of day time day to change background.
+                    $background_day_color -> Default background div color day.
+                    $background_night_color -> Default background div color night.
+
+                    $time_day_control_min -> Start time of the day to change background.
+                    $time_day_control_max -> End of day time day to change background.
                      
 
 3. Run.
