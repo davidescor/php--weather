@@ -1,12 +1,5 @@
 <?php
 
-if(isset($_GET['city'])){
-  $city = $_GET['city'];
-}else{
-  $city = 3776;
-}
-
-
 $day = [];
 $dayWeather = [];
 $dayWeatherDesc = [];
@@ -23,12 +16,19 @@ $hourWind = [];
 $hourWindSymbol = [];
 $hourSymnbolDesc = [];
 
-$url = "http://api.tiempo.com/index.php?api_lang=es&localidad=".$city."&affiliate_id=zh7hawv169fw&v=2.0&h=1";
+$url = "http://api.tiempo.com/index.php?api_lang=es&localidad=".$city."&affiliate_id=".$apikey."&v=2.0&h=1";
 
 $xml=simplexml_load_file($url) or die("Error: Cannot create object");
 
 $lugar = $xml->location->attributes();
-$city = explode('[', $lugar);
+
+$get_api_city = explode('[', $lugar);
+
+
+$level1 = explode('[', $lugar);
+$level2 = explode(';', $level1[1]);
+$level3 = explode(']', $level2[1]);
+
 
 //INFO 5 DAYS
 for($i = 0; $i < 5; $i++){
@@ -51,7 +51,6 @@ for($k = 0; $k < 24; $k++){
   $hourWind[$k] = htmlentities($xml->location->day->hour[$k]->wind->attributes()->value,ENT_COMPAT,'UTF-8');
   $hourWindSymbol[$k] = htmlentities($xml->location->day->hour[$k]->wind->attributes()->symbol,ENT_COMPAT,'UTF-8');
 }
-
 
 
 ?>

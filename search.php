@@ -1,7 +1,7 @@
 <?php
-
+  include_once("core/control/search/control.php");
   include_once("core/func/func.php");
-
+  include_once("core/func/search/func.php");
 ?>
 
 <html>
@@ -22,9 +22,7 @@
   <link href="core/design/css/style.css" rel="stylesheet">
 
 
-<?php
-  getTitle($get_api_city);
-?>
+  <title>EL TIEMPO - SEARCH</title>
 
 </head>
 <body>
@@ -46,58 +44,38 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CIUDADES</a>
           <div class="dropdown-menu" aria-labelledby="dropdown04">
-            <a class="dropdown-item" href="index.php?city=12788">TOKIO</a>
-            <a class="dropdown-item" href="index.php?city=11290">NUEVA YORK</a>
-            <a class="dropdown-item" href="index.php?city=10495">LOS ÁNGELES</a>
-            <a class="dropdown-item" href="index.php?city=34032">LONDRES</a>
-            <a class="dropdown-item" href="index.php?city=26048">PARIS</a>
-            <a class="dropdown-item" href="index.php?city=313">MADRID</a>
-            <a class="dropdown-item" href="index.php?city=13564">MOSCÚ</a>
-            <a class="dropdown-item" href="index.php?city=31010">ROMA</a>
+            <a class="dropdown-item" href="#">TOKIO</a>
+            <a class="dropdown-item" href="#">NUEVA YORK</a>
+            <a class="dropdown-item" href="#">LOS ÁNGELES</a>
+            <a class="dropdown-item" href="#">LONDRES</a>
+            <a class="dropdown-item" href="#">PARIS</a>
+            <a class="dropdown-item" href="#">MADRID</a>
+            <a class="dropdown-item" href="#">MOSCÚ</a>
+            <a class="dropdown-item" href="#">ROMA</a>
           </div>
         </li>
       </ul>
     <form METHOD="POST" ACTION="search.php" class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2 nav-link text-center" type="search" placeholder="El tiempo en..." aria-label="Search" name="name" required>
+        <input class="form-control mr-sm-2 nav-link" type="search" placeholder="El tiempo en..." aria-label="Search" name="name" required>
       <div class="center-btn">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">BUSCAR</button>
+        <button class="btn btn-outline-success my-2 my-sm-0 nav-link" type="submit">BUSCAR</button>
       </div>
     </form>
     </div>
   </nav>
 
-  <div id="bg-time" class="row">
-
-    <?php 
-      controlDayNight($localinfo,$background_day_color,$background_night_color,$time_day_control_min,$time_day_control_max,$background_navbar_day_color,$background_navbar_night_color,$timeSet);
-     ?>
-
-    <div class="col-md-12 text-center">
-      <?php
-        firstDay($dayWeather, $get_api_city, $localinfo, $dayWeatherDesc, $dayTempmin, $dayTempmax, $dayWind, $dayWindSymbol,$hour,$hourTemp,$level2,$level3);
-      ?>      
-    </div>
-
-  <div class="col-md-12 text-center">
-    <hr class="hr-white">
-      <div class="container">
-        <div class="row">
-          <?php
-            dayHistory($day, $dayWeather, $get_api_city, $localinfo, $dayWeatherDesc, $dayTempmin, $dayTempmax, $dayWind, $dayWindSymbol);
-          ?>
-        </div>
-      </div>
-    </div>
-  </div>
+   <?php 
+      controlDayNightSearch($localinfo,$background_day_color,$background_night_color,$time_day_control_min,$time_day_control_max,$background_navbar_day_color,$background_navbar_night_color);
+    ?>
 
   <div class="row">
-    <div class="container">
+    <div class="container text-center">
+      <br>
+      <?php
 
-      <div class="col-md-12 text-center">
-        <?php
-          hourHistory($hour,$hourTemp,$hourSymnbol,$hourWind,$hourWindSymbol,$hourSymnbolDesc,$get_api_city);
-        ?>
-
+      getSearch($id,$name_country_search,$nivel1,$nivel2,$nivel3,$max);
+        
+      ?>
       <div class="col-md-12">
         <footer class="footer text-center">
           <p class="f-size17 c-black">© EL TIEMPO 2020 </p><a class="no-style" href="http://www.davidespier.com">Created by davidespier.com</a>
@@ -106,9 +84,8 @@
 
      </div>
     </div>
-  </div>
 
-  <script src="core/design/vendor/jquery/jquery.min.js"></script>
+  <script src="core/design/core/vendor/jquery/jquery.min.js"></script>
   <script src="core/design/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>

@@ -3,6 +3,23 @@
 body{
 	font-family: 'Abel', sans-serif;
 	overflow-x: hidden;
+	background-color: white;
+}
+.navbar-search{
+	background-color: #2c568c;
+}
+.navbar-brand{
+	color: white;
+	font-size: 24px;
+}
+.navbar-brand:hover{
+	color: white;
+}
+.search{
+	color: white;
+}
+.search:hover{
+	color: white;
 }
 .hr-white{
 	width: 85%;
@@ -17,23 +34,6 @@ body{
 }
 .upcase{
 	text-transform: uppercase;
-}
-
-.bg-img-day{
-	background: #457fca;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #5691c8, #457fca);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #5691c8, #457fca); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.bg-img-mid-night{
-background: #5C258D;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-.bg-img-night{
-background: #232526;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .bg-darkblue{
@@ -103,8 +103,8 @@ background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, F
 .f-size50{
 	font-size: 50px;
 }
-.f-size105{
-	font-size: 105px;
+.f-size95{
+	font-size: 90px;
 }
 
 .margin-5{
@@ -119,12 +119,23 @@ background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, F
 .f-right{
 	float: right;
 }
-
+.no-style{
+	font-size: 18px;
+}
 .footer{
 	margin-top: 5%;
 	color: black;
 }
+.btn-outline-success{
+	border-color: white;
+	background-color: transparent !important;
+	color: white;
+}
+.btn-outline-success:hover{
 
+	border-color: #999999;
+	color: #999999;
+}
 
 @media only screen and (max-width: 600px) {
 
@@ -149,11 +160,12 @@ background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, F
 	.ptopupother{
 	 	display: none;
 	}
+	.navbar{
+		text-align: center;
+	}
+	.center-btn{
+		width: 100%;
+		text-align: center;
+	}
  
-}
-
-.provincias{
-	color: white;
-	font-size: 50px;
-	padding: 25px;
 }
