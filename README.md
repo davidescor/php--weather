@@ -17,7 +17,6 @@ Website in PHP with functionality to collect the current weather of different ci
 
 2. Edit config in 'core/config.php and paste apikey.
 
-```bash
           $timeSet = 'Europe/Madrid';
 
           $city = 313; 
@@ -31,7 +30,6 @@ Website in PHP with functionality to collect the current weather of different ci
 
           $time_day_control_min = '07:00';
           $time_day_control_max = '21:00';
-```
 
  2.1 - Explanation:
  
