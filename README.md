@@ -31,7 +31,7 @@ Website in PHP with functionality to collect the current weather of different ci
           $time_day_control_min = '07:00';
           $time_day_control_max = '21:00';
 
-                    2.1 - Explanation:
+          2.1 - Explanation:
 
                     $timeSet = 'Europe/Madrid';
 
