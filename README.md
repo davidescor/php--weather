@@ -1,4 +1,7 @@
-![eltiempo](http://davidespier.com/img/appweb/eltiempo.png)
+
+![eltiempo](http://davidespier.com/img/appweb/eltiempo-day.png)
+![eltiempo](http://davidespier.com/img/appweb/eltiempo-night.png)
+
 
 # El tiempo
 
@@ -33,7 +36,7 @@ Website in PHP with functionality to collect the current weather of different ci
 
           2.1 - Explanation:
 
-                    $timeSet = 'Europe/Madrid';
+                    $timeSet -> Set the default time zone.
 
                     $city -> Default city on the main page.
                     $apikey -> Add your private api key https://www.tiempo.com/api
