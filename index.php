@@ -40,11 +40,8 @@
         <li class="nav-item active">
           <a class="nav-link" href="index.php">INDEX<span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">CONTACTO</a>
-        </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CIUDADES</a>
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CIUDADES</a>
           <div class="dropdown-menu" aria-labelledby="dropdown04">
             <a class="dropdown-item" href="index.php?city=12788">TOKIO</a>
             <a class="dropdown-item" href="index.php?city=11290">NUEVA YORK</a>
@@ -55,6 +52,9 @@
             <a class="dropdown-item" href="index.php?city=13564">MOSCÚ</a>
             <a class="dropdown-item" href="index.php?city=31010">ROMA</a>
           </div>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CONTACTO</a>
+        </li>
         </li>
       </ul>
     <form METHOD="POST" ACTION="search.php" class="form-inline my-2 my-lg-0">

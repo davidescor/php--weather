@@ -41,19 +41,6 @@
         <li class="nav-item">
           <a class="nav-link" href="#">CONTACTO</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CIUDADES</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown04">
-            <a class="dropdown-item" href="#">TOKIO</a>
-            <a class="dropdown-item" href="#">NUEVA YORK</a>
-            <a class="dropdown-item" href="#">LOS ÁNGELES</a>
-            <a class="dropdown-item" href="#">LONDRES</a>
-            <a class="dropdown-item" href="#">PARIS</a>
-            <a class="dropdown-item" href="#">MADRID</a>
-            <a class="dropdown-item" href="#">MOSCÚ</a>
-            <a class="dropdown-item" href="#">ROMA</a>
-          </div>
-        </li>
       </ul>
     <form METHOD="POST" ACTION="search.php" class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2 nav-link" type="search" placeholder="El tiempo en..." aria-label="Search" name="name" required>
