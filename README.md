@@ -18,21 +18,19 @@ Website in PHP with functionality to collect the current weather of different ci
 2. Edit config in 'core/config.php and paste apikey.
 
 ```bash
+          $timeSet = 'Europe/Madrid';
 
-  $timeSet = 'Europe/Madrid';
+          $city = 313; 
+          $apikey = '*****'; 
 
-  $city = 313; 
-  $apikey = '*****'; 
+          $background_navbar_day_color = '#2c568c';
+          $background_navbar_night_color = '#000000';
 
-  $background_navbar_day_color = '#2c568c';
-  $background_navbar_night_color = '#000000';
+          $background_day_color = '#457fca';
+          $background_night_color = '#212121';
 
-  $background_day_color = '#457fca';
-  $background_night_color = '#212121';
-
-  $time_day_control_min = '07:00';
-  $time_day_control_max = '21:00';
-  
+          $time_day_control_min = '07:00';
+          $time_day_control_max = '21:00';
 ```
 
  2.1 - Explanation:
