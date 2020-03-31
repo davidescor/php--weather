@@ -10,13 +10,13 @@ Website in PHP with functionality to collect the current weather of different ci
 ## Requirements
 
 
-- Register to [tiempo.com/api/](https://www.tiempo.com/api/).
+- Register to [https://www.tiempo.com/api/#/login](https://www.tiempo.com/api/#/login).
 - Php 5.6+.
 
 
 ## Installation
 
-1. Register on the page of [https://www.tiempo.com/api/](https://www.tiempo.com/api) to obtain the apikey.
+1. Register on the page of [https://www.tiempo.com/api/#/login](https://www.tiempo.com/api/#/login) to obtain the apikey.
 
 2. Edit config in 'core/config.php and paste apikey.
 
