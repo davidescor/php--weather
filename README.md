@@ -1,5 +1,5 @@
 
-![eltiempo](http://davidespier.com/img/appweb/eltiempo-day.png)
+![eltiempo](http://davidespier.com/github/eltiempo.jpg)
 ![eltiempo](http://davidespier.com/img/appweb/eltiempo-night.png)
 
 
