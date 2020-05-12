@@ -68,7 +68,7 @@ Website in PHP with functionality to collect the current weather of different ci
 
 ## Website project
 
-[http://davidespier.com/pages/eltiempo/](http://davidespier.com/pages/eltiempo/)
+[http://davidespier.com/pages/weather/](http://davidespier.com/pages/weather/)
 
 
 ## Authors
