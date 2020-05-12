@@ -1,3 +1,8 @@
+<p align="center">
+          <img src="http://davidespier.com/github/weather-ico.png" width="128" height="128"/>
+</p>
+          
+
 
 ![eltiempo](http://davidespier.com/github/weather-day.PNG)
 ![eltiempo](http://davidespier.com/github/weather-night.PNG)
