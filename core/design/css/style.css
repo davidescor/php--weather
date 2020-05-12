@@ -2,13 +2,29 @@
 
 body{
 	font-family: 'Abel', sans-serif;
-	overflow-x: hidden;
 	background-color: white;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	width: 100%;
+}
+
+.left-content{
+	padding-left: 0px;
+	padding-right: 0px;
+	height: 100vh;
+	background-color: red;
+	text-align: center;
+}
+.right-content{
+	text-align: center;
+	overflow-y: scroll;
+	max-height: 100vh;
 }
 .navbar-search{
 	background-color: #2c568c;
 }
 .navbar-brand{
+	padding-left: 1%;
 	color: white;
 	font-size: 24px;
 }
@@ -73,11 +89,8 @@ body{
 	padding-top: 2%;
 	padding-bottom: 2%;
 }
-.ptopupother:hover{
-	background-color: #1a3d60;
-}
 .p-left{
-	margin-left: 2%;
+	margin-left: 5%;
 }
 .m-left5{
 	padding-right: 7.3%;
@@ -136,8 +149,15 @@ body{
 	border-color: #999999;
 	color: #999999;
 }
+.in-left-content{
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
+	body{
+		overflow-y: visible;
+	}
 
 	.hr-white{
 	  	visibility: hidden;
@@ -167,5 +187,7 @@ body{
 		width: 100%;
 		text-align: center;
 	}
- 
+ 	.left-content{
+ 		height: auto;
+ 	}
 }

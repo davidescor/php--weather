@@ -52,8 +52,6 @@ function firstDay(&$dayWeather, &$get_api_city, &$localinfo, &$dayWeatherDesc, &
           <p class="c-white f-size15 upcase text-center">'.$level2[0].' - '.$level3[0].'</p>
           <img src="core/design/img/weather/color/'.$dayWeather[0].'.svg" alt="img temp">
           <p class="c-white f-size95">'.$show_temperature.'°</p>
-          <p class="c-white f-size25">'.$dayWeatherDesc[0].'</p>
-          <p class="c-white f-size15 upcase text-center">Última actualización : '.$localinfo[0].'</p>
 
           ';
 }
