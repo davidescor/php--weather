@@ -1,9 +1,9 @@
 
-![eltiempo](http://davidespier.com/github/eltiempo.jpg)
-![eltiempo](http://davidespier.com/img/appweb/eltiempo-night.png)
+![eltiempo](http://davidespier.com/github/weather-day.PNG)
+![eltiempo](http://davidespier.com/github/weather-night.PNG)
 
 
-# El tiempo
+# Weather (El tiempo)
 
 Website in PHP with functionality to collect the current weather of different cities, use a third-party API.
 
