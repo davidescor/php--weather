@@ -3,8 +3,12 @@
 </p>
           
 
+<br>
 
-![eltiempo](http://davidespier.com/github/weather-day.PNG)
+![eltiempo](http://davidespier.com/github/weather-day.PNG
+
+<br>
+
 ![eltiempo](http://davidespier.com/github/weather-night.PNG)
 
 
