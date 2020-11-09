@@ -30,7 +30,7 @@
 <body>
 
   <div class="row">
-    <div class="col-xl-6 left-content" id="bg-time">
+    <div class="col-xl-12 up-content" id="bg-time">
 
       <nav class="navbar navbar-expand-xl navbar-dark" id="bg-time-navbar">
         <a class="navbar-brand" href="index.php">EL TIEMPO</a>
@@ -87,12 +87,17 @@
 
     </div>
 
-    <div class="col-xl-6 right-content">
+    <div class="col-xl-12 down-content">
       <?php
         hourHistory($hour,$hourTemp,$hourSymnbol,$hourWind,$hourWindSymbol,$hourSymnbolDesc,$get_api_city);
       ?>
     </div>
   </div>
+  <footer>
+    <div class="text-center">
+      <p class="f-size20">2020 © Weather</p>
+    </div>
+  </footer>
 
   <script src="core/design/vendor/jquery/jquery.min.js"></script>
   <script src="core/design/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
