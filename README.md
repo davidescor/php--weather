@@ -7,13 +7,13 @@
 
 07:00
 
-![eltiempo](http://davidespier.com/github/w-php/weather-day.PNG)
+![eltiempo](http://davidespier.com/github/w-php/weather-day.png)
 
 <br>
 
 21:00
 
-![eltiempo](http://davidespier.com/github/w-php/weather-night.PNG)
+![eltiempo](http://davidespier.com/github/w-php/weather-night.png)
 
 
 # Weather (El tiempo)
