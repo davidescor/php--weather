@@ -1,5 +1,5 @@
 <p align="center">
-          <img src="www.davidespier.com/github/php--weather/weather-ico.png" width="128" height="128"/>
+          <img src="https://i.postimg.cc/YS6DBP5D/weather-ico.png" width="128" height="128"/>
 </p>
           
 
@@ -7,13 +7,13 @@
 
 07:00
 
-![eltiempo](www.davidespier.com/github/php--weather/weatherday.png)
+![eltiempo]https://i.postimg.cc/fL5HJ9Tx/weatherday.png)
 
 <br> 
 
 21:00
 
-![eltiempo](http://www.davidespier.com/github/php--weather/weathernight.png)
+![eltiempo](https://i.postimg.cc/cHd9xmZx/weathernight.jpg)
 
 
 # Weather (El tiempo)
