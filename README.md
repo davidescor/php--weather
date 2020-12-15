@@ -1,5 +1,5 @@
 <p align="center">
-          <img src="https://i.postimg.cc/YS6DBP5D/weather-ico.png" width="128" height="128"/>
+          <img src="https://i.postimg.cc/YS6DBP5D/weather-ico.png" width="312" height="312"/>
 </p>
           
 
