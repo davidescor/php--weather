@@ -2,7 +2,7 @@
           <img src="https://i.postimg.cc/YS6DBP5D/weather-ico.png" width="312" height="312"/>
 </p>
           
-
+# Desktop
 <br>
 
 07:00
@@ -14,6 +14,14 @@
 21:00
 
 ![eltiempo](https://i.postimg.cc/cHd9xmZx/weathernight.jpg)
+
+# Mobile
+<br>
+<img src="https://i.postimg.cc/DwTCB4PG/mobile-weather.png" alt="mobile-weather"/><br>
+
+# Tablet
+<br>
+<img src="https://i.postimg.cc/52SsG9sR/ipad-weather.png" alt="ipad-weather"/><br>
 
 
 # Weather (El tiempo)
