@@ -88,9 +88,11 @@
     </div>
 
     <div class="col-xl-12 down-content">
+      <div class="container">
       <?php
         hourHistory($hour,$hourTemp,$hourSymnbol,$hourWind,$hourWindSymbol,$hourSymnbolDesc,$get_api_city);
       ?>
+    </div>
     </div>
   </div>
   <footer>

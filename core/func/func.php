@@ -141,7 +141,7 @@ function hourHistory(&$hour, &$hourTemp, &$hourSymnbol, &$hourWind, &$hourWindSy
   echo '<p class="c-black f-size30 text-center-xs margin-5">El Tiempo en '.$get_api_city[0].' hoy día '.$fecha.'.</p>';
 
   for($i = 0; $i < 24; $i++){
-    echo ' <hr class="hr-gray">
+    echo '<br><br>
             <div class="row">
               <div class="col-md-2 text-center-xs">
                 <p class="f-size20">'.$hour[$i].'</p>
